@@ -4,7 +4,7 @@ Select ((sum(case when gender like "Male%" and PreferredWorkingEnvironment like 
 inner join personalized_info
 on learning_aspirations.ResponseID=personalized_info.ResponseID;
 
-#ques2 What percentage of GenZ's who have chosen their carrer in Business Operations are most likely to be  influenced by their parents
+#ques2 What percentage of GenZ's who have chosen their career in Business Operations are most likely to be  influenced by their parents
 Select (avg(case when ClosestAspirationalCareer like "Business Operations%"  and learning_aspirations.CareerInfluenceFactor="My Parents" then 1 else 0 end )*100) as business_carrerchoice from learning_aspirations;
 
 #ques3 What percentage of GenZ prefer opting for higher studies,give a gender wise approach?
